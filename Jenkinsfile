@@ -8,7 +8,7 @@ pipeline{
         }
         stage("run"){
             steps{
-                'python3 runner.py'
+                script 'python3 runner.py'
                 echo '自动化代码执行完毕'
             }
         }
