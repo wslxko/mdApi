@@ -8,7 +8,7 @@ pipeline{
         }
         stage("run"){
             steps{
-                'python3 runner.py'
+                sh label: '', script: 'python3 runner.py'
             }
         }
     }
