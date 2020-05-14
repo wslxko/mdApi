@@ -13,5 +13,10 @@ pipeline{
                 echo '自动化代码执行完毕'
             }
         }
+        stage("clean workspace"){
+            steps{
+                deleteDir("/idaasapipipeline")
+            }
+        }
     }
 }
