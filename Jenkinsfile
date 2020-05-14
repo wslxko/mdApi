@@ -3,7 +3,9 @@ pipeline{
     stages{
         stage('stage 1'){
             steps{
-                echo "hello world"
+                dir("mdapi"){
+                    echo "hello world"
+                }
             }
         }
     }
