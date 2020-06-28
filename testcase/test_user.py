@@ -3,19 +3,19 @@ import ddt
 from common import commonMethod, requestMethod
 from process import loginProcess, globalData, useDatabase
 import json
+import time
 
 localCommonMethod = commonMethod.CommonMethod()
 localRequestMethod = requestMethod.RequestMethod()
 localLoginProcess = loginProcess.LoginProcess()
 localUserDatabase = useDatabase.SelectData()
 testDatas = localCommonMethod.readExcel("user")
-createUserData = testDatas[0:2]
 
 
 @ddt.ddt
 class TestLogin(unittest.TestCase):
     @ddt.data(*testDatas[0:2])
-    def test_CreateSubAccount(self, testDatas):
+    def test_1_CreateSubAccount(self, testDatas):
         global resultDict
         headers = localLoginProcess.addTokenToHeader(globalData.env)
         uri = localCommonMethod.getUrl("HTTP", globalData.env, testDatas[2])
@@ -27,26 +27,23 @@ class TestLogin(unittest.TestCase):
         finally:
             self.checkResult(resultDict["code"], testDatas[4])
 
-    @ddt.data(testDatas[2])
-    def test_deleteSubAccount(self, testDatas):
+    @ddt.data(*testDatas[2:4])
+    def test_2_deleteSubAccount(self, testDatas):
         global resultDict, dbResult
-        name = 'AUTOTEST1'
-        data = {"userId": str(localUserDatabase.selectUserInfo(name)[0])}
+        data = {"userId": str(localUserDatabase.selectUserInfo(testDatas[3])[0])}
         headers = localLoginProcess.addTokenToHeader(globalData.env)
         uri = localCommonMethod.getUrl("HTTP", globalData.env, testDatas[2])
         try:
             result = localRequestMethod.request(testDatas[1], uri, headers, json.dumps(data))
             resultDict = json.loads(result.text)
-            user_id = localUserDatabase.selectUserInfo(name)
+            user_id = localUserDatabase.selectUserInfo(testDatas[3])
             dbResult = localUserDatabase.seleceTenantUserStatus(user_id[0])
         except Exception as e:
             raise e
         finally:
-            localUserDatabase.deleteUser("AUTOTEST1")
-            localUserDatabase.deleteUser("AUTOTEST2")
+            localUserDatabase.deleteUser(testDatas[3])
             self.checkResult(resultDict["code"], '0')
             self.checkResult(dbResult[0], 0)
-
 
     def checkResult(self, expect, reality):
         self.assertEqual(expect, reality)

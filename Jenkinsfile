@@ -3,12 +3,12 @@ pipeline{
     stages{
         stage("check out"){
             steps{
-                git credentialsId: 'cc20d591-cf24-4226-91e6-bfc84e3fe897', url: 'https://github.com/wslxko/mdApi'
+                git credentialsId: '30857ba1-cf29-4f9f-9609-bdf99e85d52d', url: 'https://github.com/wslxko/mdApi'
             }
         }
         stage("run"){
             steps{
-                sh label: '', script: 'python3 runner.py'
+                sh label: '', script: '/usr/local/bin/python3 runner.py'
                 echo '自动化代码执行完毕'
             }
         }

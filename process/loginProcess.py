@@ -7,13 +7,13 @@ localCommonMethod = commonMethod.CommonMethod()
 
 
 class LoginProcess:
-    def login(self, env):
+    def getToken(self, env):
         loginRes = localRequestMethod.login(env)
         token = json.loads(loginRes.text)['result']["token"]
         return token
 
     def addTokenToHeader(self, env):
-        token = self.login(env)
+        token = self.getToken(env)
         headers = json.loads(localCommonMethod.readOpt("header", "header"))
         headers["IDAAS-AUTH-TOKEN"] = token
         return headers
