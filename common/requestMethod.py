@@ -30,9 +30,9 @@ class RequestMethod:
     def login(self, env):
         headers = {"Content-Type": "application/json"}
         data = {
-            "username": "MC315931500",
-            "password": "pI+9STrXB7K9Q49hFw4BPw==",
-            "sid": "1244823135126822913"
+            "username": "MC000000019",
+            "password": "HDcJZSZbsNRdn5DikBEltw==",
+            "sid": "20"
         }
         url = localCommonMethod.getUrl("HTTP", env, "/user/login")
         res = requests.post(url=url, data=json.dumps(data), headers=headers)

@@ -2,10 +2,10 @@ import MySQLdb
 from common.commonMethod import CommonMethod
 
 localCommonMethod = CommonMethod()
-baseIp = localCommonMethod.readOpt('database', 'ip')
-baseUsername = localCommonMethod.readOpt('database', 'username')
-basePassword = localCommonMethod.readOpt('database', 'password')
-baseBase = localCommonMethod.readOpt('database', 'base')
+baseIp = localCommonMethod.readOpt('database', 'dev_ip')
+baseUsername = localCommonMethod.readOpt('database', 'dev_username')
+basePassword = localCommonMethod.readOpt('database', 'dev_password')
+baseBase = localCommonMethod.readOpt('database', 'dev_base')
 
 
 class SelectData:

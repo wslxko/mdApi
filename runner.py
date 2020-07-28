@@ -3,8 +3,27 @@ import os
 from datetime import datetime
 import unittest
 from common import commonMethod
+import argparse
 
 localCommonMethod = commonMethod.CommonMethod()
+project_dev = {"idaas_dev": "project_env/idaas_dev/"}
+
+
+class Parser:
+    def parser_args(self):
+        parser = argparse.ArgumentParser()
+        parser.add_argument("-p", "--project", default="idaas", help="project")
+        parser.add_argument("-e", "--env", default="dev", help="env")
+        args = parser.parse_args()
+        return args
+
+    def env(self):
+        env = self.parser_args().env
+        return env
+
+    def project(self):
+        project = self.parser_args().project
+        return project
 
 
 class AllTest:
@@ -12,7 +31,10 @@ class AllTest:
         global resultPath
         resultPath = os.path.join(localCommonMethod.paths(), 'report', str(datetime.now().strftime("%Y%m%d%H%M%S")))
         self.caseListFile = os.path.join(localCommonMethod.paths(), "caseFile", "caseFile.txt")
-        self.caseFile = os.path.join(localCommonMethod.paths(), "testcase")
+        parser = Parser()
+        project_dev = parser.project()
+        env = parser.env()
+        self.caseFile = os.path.join(localCommonMethod.paths(), "project_env/{}_{}/".format(project_dev, env), "testcase")
         self.caseList = []
 
     def set_case_list(self):
