@@ -6,8 +6,6 @@ from common import commonMethod
 import argparse
 
 localCommonMethod = commonMethod.CommonMethod()
-project_dev = {"idaas_dev": "project_env/idaas_dev/"}
-
 
 class Parser:
     def parser_args(self):
