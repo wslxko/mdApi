@@ -7,6 +7,7 @@ import argparse
 
 localCommonMethod = commonMethod.CommonMethod()
 
+
 class Parser:
     def parser_args(self):
         parser = argparse.ArgumentParser()
@@ -15,24 +16,20 @@ class Parser:
         args = parser.parse_args()
         return args
 
-    def env(self):
-        env = self.parser_args().env
-        return env
-
     def project(self):
         project = self.parser_args().project
         return project
 
+    def env(self):
+        env = self.parser_args().env
+        return env
 
-class AllTest:
+
+class AllTest(Parser):
     def __init__(self):
-        global resultPath
-        resultPath = os.path.join(localCommonMethod.paths(), 'report', str(datetime.now().strftime("%Y%m%d%H%M%S")))
+        self.resultPath = os.path.join(localCommonMethod.paths(), 'report', str(datetime.now().strftime("%Y%m%d%H%M%S")))
         self.caseListFile = os.path.join(localCommonMethod.paths(), "caseFile", "caseFile.txt")
-        parser = Parser()
-        project_dev = parser.project()
-        env = parser.env()
-        self.caseFile = os.path.join(localCommonMethod.paths(), "project_env/{}_{}/".format(project_dev, env), "testcase")
+        self.caseFile = os.path.join(localCommonMethod.paths(), "project_env/{}_{}/".format(self.project(), self.env()))
         self.caseList = []
 
     def set_case_list(self):
@@ -40,7 +37,7 @@ class AllTest:
         for value in fb.readlines():
             data = str(value)
             if data != '' and not data.startswith("#"):
-                self.caseList.append(data.replace("\n", " "))
+                self.caseList.append(data.replace("\n", ""))
             fb.close()
         return self.caseList
 
@@ -64,7 +61,7 @@ class AllTest:
     def run(self):
         suit = self.set_case_suite()
         HTMLReport.TestRunner(
-            output_path=resultPath,
+            output_path=self.resultPath,
             report_file_name="测试报告",
             log_file_name="测试运行日志",
             title="测试报告",

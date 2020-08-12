@@ -30,12 +30,12 @@ class TestLogin(unittest.TestCase):
     @ddt.data(*testDatas[2:4])
     def test_2_deleteSubAccount(self, testDatas):
         global resultDict, tenant_user_id
-        data = {"userId": str(localUserDatabase.selectUserInfo(testDatas[3])[0])}
+        data = {"userId": str(localUserDatabase.select_id_to_user_info(testDatas[3])[0])}
         uri = localCommonMethod.getUrl("HTTP", "dev", testDatas[2])
         try:
             result = localRequestMethod.request(testDatas[1], uri, headers, json.dumps(data))
             resultDict = json.loads(result.text)
-            user_id = localUserDatabase.selectUserInfo(testDatas[3])
+            user_id = localUserDatabase.select_id_to_user_info(testDatas[3])
             tenant_user_id = localUserDatabase.seleceTenantUserStatus(user_id[0])
         except Exception as e:
             raise e
