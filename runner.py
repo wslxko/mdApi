@@ -29,7 +29,7 @@ class AllTest(Parser):
     def __init__(self):
         self.resultPath = os.path.join(localCommonMethod.paths(), 'report', str(datetime.now().strftime("%Y%m%d%H%M%S")))
         self.caseListFile = os.path.join(localCommonMethod.paths(), "caseFile", "caseFile.txt")
-        self.caseFile = os.path.join(localCommonMethod.paths(), "project_env/{}_{}/".format(self.project(), self.env()))
+        self.caseFile = os.path.join(localCommonMethod.paths(), "project_env/{}/{}/".format(self.project(), self.env()))
         self.caseList = []
 
     def set_case_list(self):

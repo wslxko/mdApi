@@ -23,11 +23,11 @@ class SelectData:
         db = MySQLdb.connect(baseIp, baseUsername, basePassword, tenantBaseBase)
         return db
 
-    def select_id_to_user_info(self, username):
+    def select_user_info(self, what, where, condition):
         db = self.joinPlatformDatabase()
         cursor = db.cursor()
         try:
-            sql = "select id from idaas_user_info where user_name = '{}'".format(username)
+            sql = "select {} from idaas_user_info where {} = '{}'".format(what, where, condition)
             cursor.execute(sql)
             data = cursor.fetchone()
             return data
@@ -41,6 +41,19 @@ class SelectData:
         cursor = db.cursor()
         try:
             sql = "select name from idaas_tenant_account where code = '{}'".format(account_code)
+            cursor.execute(sql)
+            data = cursor.fetchone()
+            return data
+        except Exception as e:
+            raise e
+        finally:
+            db.close()
+
+    def select_account_info(self, what, where, condition):
+        db = self.joinTenantDatabase()
+        cursor = db.cursor()
+        try:
+            sql = "select {} from idaas_tenant_account where {} = '{}'".format(what, where, condition)
             cursor.execute(sql)
             data = cursor.fetchone()
             return data
@@ -76,10 +89,10 @@ class SelectData:
         finally:
             db.close()
 
-    def select_tenant_info(self, tenant_code):
+    def select_tenant_info(self, what, where, condition):
         db = self.joinPlatformDatabase()
         cursor = db.cursor()
-        sql = "select name from idaas_tenant_info where code='{}'".format(tenant_code)
+        sql = "select {} from idaas_tenant_info where {} ='{}'".format(what, where, condition)
         try:
             cursor.execute(sql)
             data = cursor.fetchone()

@@ -2,3 +2,4 @@ report/
 .idea/
 __pycache__
 .DS_Store
+/project_env/idaas/sit/.pytest_cache/

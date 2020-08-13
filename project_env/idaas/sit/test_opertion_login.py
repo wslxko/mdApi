@@ -9,7 +9,7 @@ password = "123456"
 
 class opertion_login(unittest.TestCase):
     def test_check_phone(self):
-        uri = local_common_method.getUrl("HTTP", "uat", "/admin/api/user/check")
+        uri = local_common_method.getUrl("HTTP", "sit", "/admin/api/user/check")
         headers = {}
         params = {"account": "luoxk3"}
         result = local_request_method.get(uri, headers, params)
