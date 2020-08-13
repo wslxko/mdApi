@@ -98,7 +98,7 @@ class SelectData:
             data = cursor.fetchone()
             return data
         except Exception as e:
-            return e
+            raise e
         finally:
             db.close()
 
@@ -112,6 +112,20 @@ class SelectData:
             data = cursor.fetchone()
             return data
         except Exception as e:
-            return e
+            raise e
         finally:
+            db.close()
+
+    # 删除运营中心账号tenant_account以及认证表credential
+    def delete_admin_and_credential(self, where, condition):
+        db = self.joinTenantDatabase()
+        cursor = db.cursor()
+        sql = "delete t,t1 from idaas_tenant_account t left join idaas_tenant_account_credential t1 on t.id = t1.account_id where t.{}='{}'".format(
+            where, condition)
+        try:
+            cursor.execute(sql)
+        except Exception as e:
+            raise e
+        finally:
+            db.commit()
             db.close()

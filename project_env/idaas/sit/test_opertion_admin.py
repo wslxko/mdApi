@@ -12,6 +12,7 @@ headers = local_login_process.api_header_token()
 
 @ddt.ddt
 class TestOpertionAdmin(unittest.TestCase):
+
     @unittest.skip
     @ddt.data(*datas[0:2])
     def test_disable_admin(self, datas):
@@ -31,6 +32,7 @@ class TestOpertionAdmin(unittest.TestCase):
         except Exception as e:
             raise e
 
+    @unittest.skip
     @ddt.data(*datas[2:4])
     def test_enable_admin(self, datas):
         uri = local_common_method.getUrl("HTTP", "sit", datas[2])
@@ -45,6 +47,66 @@ class TestOpertionAdmin(unittest.TestCase):
                 self.checkResult(base_user_status, 1)
             else:
                 pass
+        except Exception as e:
+            raise e
+
+    @unittest.skip
+    @ddt.data(*datas[4:6])
+    def test_check_phone_exist(self, datas):
+        uri = local_common_method.getUrl("HTTP", "sit", datas[2])
+        try:
+            result = local_request_method.request(datas[1], uri, headers, datas[3])
+            resultDict = json.loads(result.text)
+            if resultDict["code"] == "0":
+                self.checkResult(datas[4], resultDict["result"])
+            else:
+                self.checkResult(datas[4], resultDict["message"])
+        except Exception as e:
+            raise e
+
+    @unittest.skip
+    @ddt.data(*datas[6])
+    def test_check_third_phone_exist(self, datas):
+        uri = local_common_method.getUrl("HTTP", "sit", datas[2])
+        try:
+            result = local_request_method.request(datas[1], uri, headers, datas[3])
+            resultDict = json.loads(result.text)
+            self.checkResult(datas[4], resultDict["message"])
+        except Exception as e:
+            raise e
+
+    @ddt.data(*datas[7:9])
+    def test_admin_1_create(self, datas):
+        uri = local_common_method.getUrl("HTTP", "sit", datas[2])
+        try:
+            result = local_request_method.request(datas[1], uri, headers, datas[3])
+            resultDict = json.loads(result.text)
+            if resultDict["code"] == "2003":
+                self.checkResult(datas[4], resultDict["message"])
+            else:
+                self.checkResult(datas[4], resultDict["code"])
+        except Exception as e:
+            raise e
+
+    @ddt.data(*datas[9:11])
+    def test_admin_delete(self, datas):
+        global resultDict, base_user_code
+        uri = local_common_method.getUrl("HTTP", "sit", datas[2])
+        try:
+            if datas[0] == "删除运营中心用户数据-成功":
+                base_user_code = local_use_database.select_account_info("code", "name", "autotestluoxk")[0]
+                json_data = json.loads(datas[3])
+                json_data["uid"] = base_user_code
+                result = local_request_method.request(datas[1], uri, headers, json.dumps(json_data))
+                resultDict = json.loads(result.text)
+                self.checkResult(datas[4], resultDict["message"])
+                base_user_deleted = local_use_database.select_account_info("deleted", "code", base_user_code)[0]
+                if resultDict["code"] == "0" and base_user_deleted == 1:
+                    local_use_database.delete_admin_and_credential("code", base_user_code)
+            else:
+                result = local_request_method.request(datas[1], uri, headers, datas[3])
+                resultDict = json.loads(result.text)
+                self.checkResult(datas[4], resultDict["message"])
         except Exception as e:
             raise e
 
