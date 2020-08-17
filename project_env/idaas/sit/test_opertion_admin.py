@@ -12,8 +12,6 @@ headers = local_login_process.api_header_token()
 
 @ddt.ddt
 class TestOpertionAdmin(unittest.TestCase):
-
-    @unittest.skip
     @ddt.data(*datas[0:2])
     def test_disable_admin(self, datas):
         uri = local_common_method.getUrl("HTTP", "sit", datas[2])
@@ -32,7 +30,6 @@ class TestOpertionAdmin(unittest.TestCase):
         except Exception as e:
             raise e
 
-    @unittest.skip
     @ddt.data(*datas[2:4])
     def test_enable_admin(self, datas):
         uri = local_common_method.getUrl("HTTP", "sit", datas[2])
@@ -50,7 +47,6 @@ class TestOpertionAdmin(unittest.TestCase):
         except Exception as e:
             raise e
 
-    @unittest.skip
     @ddt.data(*datas[4:6])
     def test_check_phone_exist(self, datas):
         uri = local_common_method.getUrl("HTTP", "sit", datas[2])
@@ -64,7 +60,6 @@ class TestOpertionAdmin(unittest.TestCase):
         except Exception as e:
             raise e
 
-    @unittest.skip
     @ddt.data(*datas[6])
     def test_check_third_phone_exist(self, datas):
         uri = local_common_method.getUrl("HTTP", "sit", datas[2])
@@ -89,7 +84,7 @@ class TestOpertionAdmin(unittest.TestCase):
             raise e
 
     @ddt.data(*datas[9:11])
-    def test_admin_delete(self, datas):
+    def test_admin_2_delete(self, datas):
         global resultDict, base_user_code
         uri = local_common_method.getUrl("HTTP", "sit", datas[2])
         try:
@@ -107,6 +102,38 @@ class TestOpertionAdmin(unittest.TestCase):
                 result = local_request_method.request(datas[1], uri, headers, datas[3])
                 resultDict = json.loads(result.text)
                 self.checkResult(datas[4], resultDict["message"])
+        except Exception as e:
+            raise e
+
+    @ddt.data(*datas[11:13])
+    def test_reset_pwd(self, datas):
+        uri = local_common_method.getUrl("HTTP", "sit", datas[2])
+        try:
+            result = local_request_method.request(datas[1], uri, headers, datas[3])
+            resultDict = json.loads(result.text)
+            self.checkResult(datas[4], resultDict["message"])
+        except Exception as e:
+            raise e
+
+    @ddt.data(*datas[13:16])
+    def test_reset_pwd(self, datas):
+        uri = local_common_method.getUrl("HTTP", "sit", datas[2])
+        try:
+            result = local_request_method.request(datas[1], uri, headers, datas[3].encode())
+            resultDict = json.loads(result.text)
+            self.checkResult(resultDict["message"], datas[4])
+
+            if resultDict["code"] == "0":
+                base_account_attr = eval(local_use_database.select_account_attr("attributes", "code",
+                                                                                json.loads(datas[3])["uid"])[0])["attributesInfo"]
+                if len(base_account_attr) != 0:
+                    for dict in base_account_attr:
+                        if dict["id"] == 1:
+                            self.checkResult(json.loads(datas[3])["mobile"], dict["value"])
+                        elif dict["id"] == 2:
+                            self.checkResult(json.loads(datas[3])["email"], dict["value"])
+                else:
+                    self.checkResult([], base_account_attr)
         except Exception as e:
             raise e
 

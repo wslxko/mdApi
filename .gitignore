@@ -3,3 +3,5 @@ report/
 __pycache__
 .DS_Store
 /project_env/idaas/sit/.pytest_cache/
+/project_env/idaas/dev/.pytest_cache/
+/project_env/idaas/uat/.pytest_cache/

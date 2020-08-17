@@ -129,3 +129,18 @@ class SelectData:
         finally:
             db.commit()
             db.close()
+
+    # 查询账号的attrs信息
+    def select_account_attr(self, what, where, condition):
+        db = self.joinTenantDatabase()
+        cursor = db.cursor()
+        sql = "select t.{} from idaas_tenant_account_attrs t left join idaas_tenant_account t1 on t1.id = t.account_id where t1.{} = '{}'".format(
+            what, where, condition)
+        try:
+            cursor.execute(sql)
+            data = cursor.fetchone()
+            return data
+        except Exception as e:
+            raise e
+        finally:
+            db.close()
