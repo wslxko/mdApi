@@ -116,7 +116,7 @@ class TestOpertionAdmin(unittest.TestCase):
             raise e
 
     @ddt.data(*datas[13:16])
-    def test_reset_pwd(self, datas):
+    def test_update_attrs(self, datas):
         uri = local_common_method.getUrl("HTTP", "sit", datas[2])
         try:
             result = local_request_method.request(datas[1], uri, headers, datas[3].encode())

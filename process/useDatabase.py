@@ -144,3 +144,45 @@ class SelectData:
             raise e
         finally:
             db.close()
+
+    # 查询包含关键词的运营账号数量
+    def select_keyword_admin_number(self):
+        db = self.joinTenantDatabase()
+        cursor = db.cursor()
+        sql = "select count(*) from idaas_tenant_account where name like '%小凯%' and sources = 'A002' and deleted = 0"
+        try:
+            cursor.execute(sql)
+            data = cursor.fetchone()
+            return data
+        except Exception as e:
+            raise e
+        finally:
+            db.close()
+
+    # 查询订购了"对象存储"服务的租户数量
+    def select_oss_tenant_number(self):
+        db = self.joinTenantDatabase()
+        cursor = db.cursor()
+        sql = "select count(*) from idaas_tenant_service where service_code='S0383091' and deleted = 0"
+        try:
+            cursor.execute(sql)
+            data = cursor.fetchone()
+            return data
+        except Exception as e:
+            raise e
+        finally:
+            db.close()
+
+    # 查询订购了"kokokk"服务的租户下的账号数量
+    def select_service_tenant_user_number(self):
+        db = self.joinTenantDatabase()
+        cursor = db.cursor()
+        sql = "SELECT count(*) FROM idaas_tenant_account WHERE id in (SELECT t.id FROM idaas_tenant_account t LEFT JOIN idaas_tenant_service t1 ON t.tenant_id = t1.tenant_id WHERE t1.service_code = 'S9933628' AND t1.tenant_id = '1297807754027343873' AND t.deleted = 0 )"
+        try:
+            cursor.execute(sql)
+            data = cursor.fetchone()
+            return data
+        except Exception as e:
+            raise e
+        finally:
+            db.close()

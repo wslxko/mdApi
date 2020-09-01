@@ -53,7 +53,6 @@ class TestBusiness(unittest.TestCase):
         except Exception as e:
             raise e
 
-    @unittest.skip
     @ddt.data(*datas[6:8])
     def test_tenant_login_setting(self, datas):
         uri = local_common_method.getUrl("HTTP", "sit", datas[2])
