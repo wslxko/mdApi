@@ -91,8 +91,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/runner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+            <state relative-caret-position="50">
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -508,7 +508,7 @@
       <workItem from="1603765309693" duration="326000" />
       <workItem from="1605860178619" duration="544000" />
       <workItem from="1605867161492" duration="3000" />
-      <workItem from="1606964336893" duration="188000" />
+      <workItem from="1606964336893" duration="249000" />
     </task>
     <servers />
   </component>
@@ -545,7 +545,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157257000" />
+    <option name="totallyTimeSpent" value="157318000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -871,8 +871,8 @@
     <entry file="file://$PROJECT_DIR$/insert_sql.py" />
     <entry file="file://$PROJECT_DIR$/runner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+        <state relative-caret-position="50">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
