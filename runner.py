@@ -10,6 +10,7 @@ localCommonMethod = commonMethod.CommonMethod()
 
 class Parser:
     def parser_args(self):
+        parser = a.llll
         parser = argparse.ArgumentParser()
         parser.add_argument("-p", "--project", default="idaas", help="project")
         parser.add_argument("-e", "--env", default="dev", help="env")
