@@ -14,7 +14,7 @@ pipeline{
         }
         stage("send email"){
             steps{
-                emailtext(
+                emailext(
                     body: 'auto test result',
                     attachmentsPattern: './report/autoreport/测试报告.html',
                     from: 'lxksg@qq.com',
