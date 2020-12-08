@@ -15,7 +15,7 @@ pipeline{
         stage("send email"){
             steps{
                 emailext(
-                    attachmentsPattern: 'report/latest/测试报告.html,./report/latest/测试运行日志.log',
+                    attachmentsPattern: 'report/latest/测试报告.html,report/latest/测试运行日志.log',
                     from: 'lxksg@qq.com',
                     mimeType: 'text/plain',
                     subject: '自动化测试报告',
