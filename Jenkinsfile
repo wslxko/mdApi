@@ -18,8 +18,9 @@ pipeline{
                     body: 'auto test result',
                     attachmentsPattern: './report/autoreport/测试报告.html',
                     from: 'lxksg@qq.com',
+                    mimeType: 'text/plain',
                     subject: 'auto test report',
-                    to: 'lxksg@qq.com'
+                    mail to: 'lxksg@qq.com'
                 )
             }
         }
