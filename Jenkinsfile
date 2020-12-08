@@ -19,7 +19,7 @@ pipeline{
                     from: 'lxksg@qq.com',
                     mimeType: 'text/plain',
                     subject: 'auto test report',
-                    to: 'lxksg@qq.com',
+                    to: ['lxksg@qq.com','luoxk3@midea,com'],
                     body: '自动化测试结果，详细见附件'
                 )
             }
