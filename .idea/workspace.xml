@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41123a50-7f17-4858-b088-eee78382645b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner.py" afterDir="false" />
     </list>
@@ -48,7 +47,7 @@
     <SUITE FILE_PATH="coverage/api$pytest_for_test_user_TestLogin.coverage" NAME="pytest for test_user.TestLogin Coverage Results" MODIFIED="1587723107000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/api$pytest_in_test_business_py.coverage" NAME="pytest in test_business.py Coverage Results" MODIFIED="1597302669416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project_env/idaas/sit" />
     <SUITE FILE_PATH="coverage/api$test_business.coverage" NAME="test_business Coverage Results" MODIFIED="1597220291931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project_env/idaas_uat" />
-    <SUITE FILE_PATH="coverage/api$runner.coverage" NAME="runner Coverage Results" MODIFIED="1597302741025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/api$runner.coverage" NAME="runner Coverage Results" MODIFIED="1607408084802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/api$1__1_.coverage" NAME="1 (1) Coverage Results" MODIFIED="1602299955335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
@@ -93,8 +92,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/runner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+            <state relative-caret-position="67">
+              <caret line="30" column="87" selection-start-line="30" selection-start-column="87" selection-end-line="30" selection-end-column="87" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -105,8 +104,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="87" selection-start-line="10" selection-start-column="87" selection-end-line="10" selection-end-column="87" />
+            <state relative-caret-position="330">
+              <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -202,6 +210,7 @@
         <option value="$PROJECT_DIR$/getLinuxStatus.py" />
         <option value="$PROJECT_DIR$/monitorserver.py" />
         <option value="$PROJECT_DIR$/insert_sql.py" />
+        <option value="$PROJECT_DIR$/common/sendEmail.py" />
         <option value="$PROJECT_DIR$/runner.py" />
         <option value="$PROJECT_DIR$/Jenkinsfile" />
       </list>
@@ -214,8 +223,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="23" />
+    <option name="x" value="467" />
+    <option name="y" value="188" />
     <option name="width" value="1375" />
     <option name="height" value="877" />
   </component>
@@ -243,20 +252,13 @@
             <path>
               <item name="api" type="b2602c69:ProjectViewProjectNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="project_env" type="462c0819:PsiDirectoryNode" />
+              <item name="report" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="api" type="b2602c69:ProjectViewProjectNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="project_env" type="462c0819:PsiDirectoryNode" />
-              <item name="idaas" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="project_env" type="462c0819:PsiDirectoryNode" />
-              <item name="idaas" type="462c0819:PsiDirectoryNode" />
-              <item name="sit" type="462c0819:PsiDirectoryNode" />
+              <item name="report" type="462c0819:PsiDirectoryNode" />
+              <item name="20201208142227" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -295,7 +297,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.insert_sql">
+  <component name="RunManager" selected="Python.runner">
     <configuration name="1 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="api" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -384,6 +386,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="runner" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="api" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runner.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test_business" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="api" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -428,22 +452,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in test_sync_api.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="api" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project_env/idaas/sit" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/project_env/idaas/sit/test_sync_api.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.test_business" />
       <item itemvalue="Python.test_opertion_admin" />
@@ -451,15 +459,15 @@
       <item itemvalue="Python.getLinuxStatus" />
       <item itemvalue="Python.insert_sql" />
       <item itemvalue="Python.monitorserver" />
-      <item itemvalue="Python tests.pytest in test_sync_api.py" />
+      <item itemvalue="Python.runner" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.runner" />
         <item itemvalue="Python.insert_sql" />
         <item itemvalue="Python.monitorserver" />
         <item itemvalue="Python.getLinuxStatus" />
         <item itemvalue="Python.1 (1)" />
-        <item itemvalue="Python tests.pytest in test_sync_api.py" />
       </list>
     </recent_temporary>
   </component>
@@ -529,7 +537,7 @@
       <workItem from="1605860178619" duration="544000" />
       <workItem from="1605867161492" duration="3000" />
       <workItem from="1606964336893" duration="1610000" />
-      <workItem from="1607396154109" duration="55000" />
+      <workItem from="1607396154109" duration="2715000" />
     </task>
     <servers />
   </component>
@@ -566,7 +574,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158734000" />
+    <option name="totallyTimeSpent" value="161394000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -578,7 +586,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="23" width="1375" height="877" extended-state="0" />
+    <frame x="467" y="188" width="1375" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.73503184" visible="true" weight="0.18529633" />
@@ -591,7 +599,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.5373494" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4985694" weight="0.34813926" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4985694" weight="0.3477707" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" weight="0.2785114" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -683,7 +691,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/process/globalData.py" />
     <entry file="file://$PROJECT_DIR$/testcase/test_user.py" />
     <entry file="file://$PROJECT_DIR$/project_env/idaas3_uat_prod/__init__.py" />
     <entry file="file://$PROJECT_DIR$/pbkdf2-encoder.iml" />
@@ -733,13 +740,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
@@ -890,16 +890,6 @@
     <entry file="file://$PROJECT_DIR$/1.py" />
     <entry file="file://$PROJECT_DIR$/monitorserver.py" />
     <entry file="file://$PROJECT_DIR$/insert_sql.py" />
-    <entry file="file://$PROJECT_DIR$/common/requestMethod.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/commonMethod.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -917,10 +907,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/requestMethod.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/sendEmail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/runner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        <state relative-caret-position="67">
+          <caret line="30" column="87" selection-start-line="30" selection-start-column="87" selection-end-line="30" selection-end-column="87" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
@@ -929,8 +946,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="87" selection-start-line="10" selection-start-column="87" selection-end-line="10" selection-end-column="87" />
+        <state relative-caret-position="330">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
         </state>
       </provider>
     </entry>

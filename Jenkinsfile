@@ -12,5 +12,17 @@ pipeline{
                 echo '自动化代码执行完毕'
             }
         }
+        stage("send email"){
+            steps{
+                emailtext(
+                    body: 'auto test result',
+                    attachmentsPattern: './report/autoreport/测试报告.html',
+                    from: 'lxksg@qq.com',
+                    replyTo: 'lxksg@qq.com',
+                    subject: 'auto test report',
+                    to: 'lxksg@qq.com'
+                )
+            }
+        }
     }
 }

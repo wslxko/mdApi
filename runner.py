@@ -1,12 +1,12 @@
 import HTMLReport
 import os
+import shutil
 from datetime import datetime
 import unittest
 from common import commonMethod
 import argparse
 
 localCommonMethod = commonMethod.CommonMethod()
-
 
 class Parser:
     def parser_args(self):
@@ -27,7 +27,8 @@ class Parser:
 
 class AllTest(Parser):
     def __init__(self):
-        self.resultPath = os.path.join(localCommonMethod.paths(), 'report', str(datetime.now().strftime("%Y%m%d%H%M%S")))
+        # self.resultPath = os.path.join(localCommonMethod.paths(), 'report', str(datetime.now().strftime("%Y%m%d%H%M%S")))
+        self.resultPath = os.path.join(localCommonMethod.paths(), 'report', "autoreport")
         self.caseListFile = os.path.join(localCommonMethod.paths(), "caseFile", "caseFile.txt")
         self.caseFile = os.path.join(localCommonMethod.paths(), "project_env/{}/{}/".format(self.project(), self.env()))
         self.caseList = []
@@ -59,6 +60,7 @@ class AllTest(Parser):
         return test_suite
 
     def run(self):
+        shutil.rmtree(os.path.join(localCommonMethod.paths(), 'report'), True)
         suit = self.set_case_suite()
         HTMLReport.TestRunner(
             output_path=self.resultPath,
