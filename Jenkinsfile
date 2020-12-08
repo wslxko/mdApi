@@ -40,8 +40,8 @@ pipeline{
                             <tr>
                               <td>
                                 <ul>
-                                  <li>项目名称&nbsp;：&nbsp;${project_name}</li>
-                                  <li>项目分支&nbsp;：&nbsp;${GIT_BRANCH}</li>
+                                  <li>项目名称: idaas</li>
+                                  <li>项目分支: sit</li>
                                   <li>提交人&nbsp;：&nbsp;${commit_user}</li>
                                   <li>提交时间&nbsp;：&nbsp;${commit_time}</li>
                                   <li>提交信息&nbsp;：&nbsp;${commit_msg}</li>
