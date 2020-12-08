@@ -77,6 +77,9 @@ class AllTest(Parser):
         shutil.copytree(self.resultPath, finalResult)
 
 
+
+
+
 if __name__ == "__main__":
     obj = AllTest()
     obj.run()
