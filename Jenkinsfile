@@ -20,7 +20,7 @@ pipeline{
                     from: 'lxksg@qq.com',
                     mimeType: 'text/plain',
                     subject: 'auto test report',
-                    mail to: 'lxksg@qq.com'
+                    to: 'lxksg@qq.com'
                 )
             }
         }
