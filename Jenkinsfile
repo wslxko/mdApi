@@ -16,7 +16,7 @@ pipeline{
             steps{
                 emailext(
                     body: 'auto test result',
-                    attachmentsPattern: './report/autoreport/测试报告.html',
+                    attachmentsPattern: './report/latest/测试报告.html',
                     from: 'lxksg@qq.com',
                     mimeType: 'text/plain',
                     subject: 'auto test report',

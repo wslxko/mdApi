@@ -8,6 +8,7 @@ import argparse
 
 localCommonMethod = commonMethod.CommonMethod()
 
+
 class Parser:
     def parser_args(self):
         parser = argparse.ArgumentParser()
@@ -27,8 +28,8 @@ class Parser:
 
 class AllTest(Parser):
     def __init__(self):
-        # self.resultPath = os.path.join(localCommonMethod.paths(), 'report', str(datetime.now().strftime("%Y%m%d%H%M%S")))
-        self.resultPath = os.path.join(localCommonMethod.paths(), 'report', "autoreport")
+        self.resultPath = os.path.join(localCommonMethod.paths(), 'report',
+                                       str(datetime.now().strftime("%Y%m%d%H%M%S")))
         self.caseListFile = os.path.join(localCommonMethod.paths(), "caseFile", "caseFile.txt")
         self.caseFile = os.path.join(localCommonMethod.paths(), "project_env/{}/{}/".format(self.project(), self.env()))
         self.caseList = []
@@ -60,7 +61,6 @@ class AllTest(Parser):
         return test_suite
 
     def run(self):
-        shutil.rmtree(os.path.join(localCommonMethod.paths(), 'report'), True)
         suit = self.set_case_suite()
         HTMLReport.TestRunner(
             output_path=self.resultPath,
@@ -71,6 +71,10 @@ class AllTest(Parser):
             thread_count=3,  # 多线程运行测试用例
             thread_start_wait=3  # 设置线程启动的延迟时间
         ).run(suit)
+
+        finalResult = os.path.join(localCommonMethod.paths(), 'report', 'latest')
+        shutil.rmtree(finalResult, True)
+        shutil.copytree(self.resultPath, finalResult)
 
 
 if __name__ == "__main__":
