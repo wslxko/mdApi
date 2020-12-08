@@ -8,7 +8,7 @@ pipeline{
         }
         stage("run"){
             steps{
-                sh label: '', script: '/usr/local/bin/python3 runner.py -p idaas -e dev'
+                sh label: '', script: '/usr/local/bin/python3 runner.py -p idaas -e sit'
                 echo '自动化代码执行完毕'
             }
         }
