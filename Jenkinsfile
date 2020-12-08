@@ -15,12 +15,62 @@ pipeline{
         stage("send email"){
             steps{
                 emailext(
-                    body: 'auto test result',
                     attachmentsPattern: './report/latest/测试报告.html',
                     from: 'lxksg@qq.com',
                     mimeType: 'text/plain',
                     subject: 'auto test report',
-                    to: 'lxksg@qq.com'
+                    to: 'lxksg@qq.com',
+                    body: """
+                        <body>
+                          <table width='95%' cellpadding='0' cellspacing='0'>
+                            <tr>
+                              <td>
+                                <h2>构建结果:<span color='#0000FF'>${currentBuild.currentResult}</span></h2>
+                              </td>
+                            </tr>
+                            <!-- git信息 -->
+                            <tr>
+                              <td><br/>
+                                <b>
+                                  <font color="#0B610B">git信息</font>
+                                </b>
+                                <hr size="2" width="100%" align="center" />
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <ul>
+                                  <li>项目名称&nbsp;：&nbsp;${project_name}</li>
+                                  <li>项目分支&nbsp;：&nbsp;${GIT_BRANCH}</li>
+                                  <li>提交人&nbsp;：&nbsp;${commit_user}</li>
+                                  <li>提交时间&nbsp;：&nbsp;${commit_time}</li>
+                                  <li>提交信息&nbsp;：&nbsp;${commit_msg}</li>
+                                  <li>提交hash&nbsp;：&nbsp;${commit_hash}</li>
+                                </ul>
+                              </td>
+                            </tr>
+                            <!-- 构建信息 -->
+                            <tr>
+                              <td><br/>
+                                <b>
+                                  <font color="#0B610B">构建信息</font>
+                                </b>
+                                <hr size="2" width="100%" align="center" />
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <ul>
+                                  <li>构建编号&nbsp;：&nbsp;第${BUILD_NUMBER}次构建</li>
+                                  <li>当前下载地址&nbsp;<a href='${current_download_url}'>${current_download_url}</a></li>
+                                  <li>最后下载地址&nbsp;<a href='${latest_download_url}'>${latest_download_url}</a></li>
+                                  <li>构建日志：&nbsp;<a href="${BUILD_URL}console">${BUILD_URL}console</a></li>
+                                </ul>
+                              </td>
+                            </tr>
+                          </table>
+                        </body>
+                        """,
                 )
             }
         }
