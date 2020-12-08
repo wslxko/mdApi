@@ -20,7 +20,8 @@ pipeline{
                     mimeType: 'text/plain',
                     subject: '自动化测试报告',
                     to: '${DEFAULT_RECIPIENTS},382558359@qq.com',
-                    body: '自动化测试结果，详细见附件'
+                    body: '自动化测试结果，详细见附件。
+                            ${PROJECT_NAME}'
                 )
             }
         }
