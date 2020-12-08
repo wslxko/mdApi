@@ -42,10 +42,10 @@ pipeline{
                                 <ul>
                                   <li>项目名称: idaas</li>
                                   <li>项目分支: sit</li>
-                                  <li>提交人&nbsp;：&nbsp;${commit_user}</li>
-                                  <li>提交时间&nbsp;：&nbsp;${commit_time}</li>
-                                  <li>提交信息&nbsp;：&nbsp;${commit_msg}</li>
-                                  <li>提交hash&nbsp;：&nbsp;${commit_hash}</li>
+                                  <li>提交人: lxk</li>
+                                  <li>提交时间: lxk</li>
+                                  <li>提交信息: lxk</li>
+                                  <li>提交hash: lxk</li>
                                 </ul>
                               </td>
                             </tr>
@@ -61,10 +61,10 @@ pipeline{
                             <tr>
                               <td>
                                 <ul>
-                                  <li>构建编号&nbsp;：&nbsp;第${BUILD_NUMBER}次构建</li>
-                                  <li>当前下载地址&nbsp;<a href='${current_download_url}'>${current_download_url}</a></li>
-                                  <li>最后下载地址&nbsp;<a href='${latest_download_url}'>${latest_download_url}</a></li>
-                                  <li>构建日志：&nbsp;<a href="${BUILD_URL}console">${BUILD_URL}console</a></li>
+                                  <li>构建编号: 1次构建</li>
+                                  <li>当前下载地址: 1</a></li>
+                                  <li>最后下载地址: 1</a></li>
+                                  <li>构建日志: <a href="1console">1console</a></li>
                                 </ul>
                               </td>
                             </tr>
