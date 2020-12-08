@@ -18,12 +18,9 @@ pipeline{
                     attachmentsPattern: 'report/latest/测试报告.html,report/latest/测试运行日志.log',
                     from: 'lxksg@qq.com',
                     mimeType: 'text/plain',
-                    subject: '自动化测试报告;${PROJECT_NAME} - Build # ${BUILD_NUMBER} - ${BUILD_STATUS}!',
+                    subject: '自动化测试同志--${PROJECT_NAME} - Build # ${BUILD_NUMBER} - ${BUILD_STATUS}!',
                     to: '${DEFAULT_RECIPIENTS},382558359@qq.com',
-                    body: """<html>
-                    <p>自动化测试结果，详细见附件。</p>
-                    <p>'${PROJECT_NAME} - Build # ${BUILD_NUMBER} - ${BUILD_STATUS}:Check console output at ${BUILD_URL} to view the results.'</p>
-                    </html>"""
+                    body: '${DEFAULT_CONTENT}'
                 )
             }
         }
