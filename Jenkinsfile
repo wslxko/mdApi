@@ -17,8 +17,8 @@ pipeline{
                 emailext(
                     attachmentsPattern: 'report/latest/测试报告.html,report/latest/测试运行日志.log',
                     from: 'lxksg@qq.com',
-                    mimeType: 'text/plain',
-                    subject: '自动化测试同志--${PROJECT_NAME} - Build # ${BUILD_NUMBER} - ${BUILD_STATUS}!',
+                    mimeType: 'text/html',
+                    subject: '自动化测试通知--${PROJECT_NAME} - Build # ${BUILD_NUMBER} - ${BUILD_STATUS}!',
                     to: '${DEFAULT_RECIPIENTS},382558359@qq.com',
                     body: '${DEFAULT_CONTENT}'
                 )

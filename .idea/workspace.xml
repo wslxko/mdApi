@@ -103,8 +103,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+            <state relative-caret-position="375">
+              <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -222,8 +222,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="90" />
-    <option name="y" value="48" />
+    <option name="x" value="92" />
+    <option name="y" value="55" />
     <option name="width" value="1375" />
     <option name="height" value="877" />
   </component>
@@ -526,7 +526,7 @@
       <workItem from="1605867161492" duration="3000" />
       <workItem from="1606964336893" duration="1610000" />
       <workItem from="1607396154109" duration="7086000" />
-      <workItem from="1607420436731" duration="1405000" />
+      <workItem from="1607420436731" duration="1687000" />
     </task>
     <servers />
   </component>
@@ -563,7 +563,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167170000" />
+    <option name="totallyTimeSpent" value="167452000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -575,7 +575,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="90" y="48" width="1375" height="877" extended-state="0" />
+    <frame x="92" y="55" width="1375" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.73503184" visible="true" weight="0.1875469" />
@@ -987,8 +987,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+        <state relative-caret-position="375">
+          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
         </state>
       </provider>
     </entry>
