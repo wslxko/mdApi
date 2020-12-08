@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41123a50-7f17-4858-b088-eee78382645b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -105,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+              <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -527,7 +526,7 @@
       <workItem from="1605867161492" duration="3000" />
       <workItem from="1606964336893" duration="1610000" />
       <workItem from="1607396154109" duration="7086000" />
-      <workItem from="1607420436731" duration="355000" />
+      <workItem from="1607420436731" duration="474000" />
     </task>
     <servers />
   </component>
@@ -564,7 +563,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166120000" />
+    <option name="totallyTimeSpent" value="166239000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -579,7 +578,7 @@
     <frame x="90" y="48" width="1375" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.73503184" visible="true" weight="0.1875469" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.73503184" visible="true" weight="0.1875469" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.26496816" side_tool="true" weight="0.27756938" />
       <window_info id="Designer" order="3" />
@@ -598,7 +597,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49964565" weight="0.3277311" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50143063" side_tool="true" weight="0.37349397" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.277707" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.277707" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32891566" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="bottom" id="Spring" order="14" />
@@ -989,7 +988,7 @@
     <entry file="file://$PROJECT_DIR$/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
         </state>
       </provider>
     </entry>
