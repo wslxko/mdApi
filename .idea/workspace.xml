@@ -104,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+              <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -525,7 +525,7 @@
       <workItem from="1605860178619" duration="544000" />
       <workItem from="1605867161492" duration="3000" />
       <workItem from="1606964336893" duration="1610000" />
-      <workItem from="1607396154109" duration="5758000" />
+      <workItem from="1607396154109" duration="5872000" />
     </task>
     <servers />
   </component>
@@ -562,7 +562,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164437000" />
+    <option name="totallyTimeSpent" value="164551000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1002,7 +1002,7 @@
     <entry file="file://$PROJECT_DIR$/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
         </state>
       </provider>
     </entry>
